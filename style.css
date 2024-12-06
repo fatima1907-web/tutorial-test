@@ -1,0 +1,54 @@
+  body {
+      font-family: Arial;
+      margin: 0;
+
+
+  }
+
+  table {
+      width: 100%;
+      height: 70vh;
+      background-color: #086fa7;
+      color: white;
+
+  }
+
+  td {
+      width: 25%;
+      text-align: center;
+      font-size: 24px;
+      background-color: #0077B6;
+  }
+
+  td:hover {
+      background-color: #00B4D8;
+      cursor: pointer;
+  }
+
+  #resultArea {
+      height: 30vh;
+      background-color: #03045E;
+      color: white;
+      font-size: 64px;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      padding: 24px;
+      box-sizing: border-box;
+
+
+  }
+
+  #result {
+      background-color: #90E0EF
+  }
+
+  #result:hover {
+      background-color: #CAF0F8;
+
+  }
+
+  .highlight {
+      background-color: #0b83c4;
+  }
