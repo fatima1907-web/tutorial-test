@@ -1,80 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-    <link rel = "stylesheet" href="style.css">
-    <script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="resultArea" class="result-area"></div>
 
-        function appendOperation(operation){
-            document.getElementById('resultArea').innerHTML +=operation ;
+    <table class="calculator">
+      <tr>
+        <td class="calculator-button action-button" data-action="delete">
+          DEL
+        </td>
+        <!-- Empty cells removed for cleaner structure -->
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
 
-        }
-        function calculateResult(){
-            let container = document.getElementById('resultArea');
-            let result = eval(container.innerHTML);
-            container.innerHTML = result;
+      <tr>
+        <td class="calculator-button number-button" data-value="7">7</td>
+        <td class="calculator-button number-button" data-value="8">8</td>
+        <td class="calculator-button number-button" data-value="9">9</td>
+        <td class="calculator-button operator-button" data-value=" / ">/</td>
+      </tr>
 
-        }
-        function deleteLast() {
-            let container = document.getElementById('resultArea');
-            if (container.innerHTML.endsWith(' ')){
-                container.innerHTML = container.innerHTML.slice(0, -3);
-            }
-            else{
-                container.innerHTML = container.innerHTML.slice(0, -1);
-            }
+      <tr>
+        <td class="calculator-button number-button" data-value="4">4</td>
+        <td class="calculator-button number-button" data-value="5">5</td>
+        <td class="calculator-button number-button" data-value="6">6</td>
+        <td class="calculator-button operator-button" data-value=" * ">x</td>
+      </tr>
 
-        }
+      <tr>
+        <td class="calculator-button number-button" data-value="1">1</td>
+        <td class="calculator-button number-button" data-value="2">2</td>
+        <td class="calculator-button number-button" data-value="3">3</td>
+        <td class="calculator-button operator-button" data-value=" + ">+</td>
+      </tr>
 
-    </script>
-
-
-    
-</head>
-<body>
-<div id="resultArea"></div>
-
-
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td onclick="deleteLast()">DEL</td>
-        </tr>
-
-        
-        <tr>
-            <td onclick="appendOperation(7)">7</td>
-            <td onclick="appendOperation(8)">8</td>
-            <td onclick="appendOperation(9)">9</td>
-            <td onclick="appendOperation(' / ')" class="highlight">/</td>
-        </tr>
-
-
-        <tr>
-            <td onclick="appendOperation(4)" >4</td>
-            <td onclick="appendOperation(5)" >5</td>
-            <td onclick="appendOperation(6)" >6</td>
-            <td onclick="appendOperation(' * ')" class="highlight">x</td>
-        </tr>
-
-
-        <tr>
-            <td onclick="appendOperation(1)" >1</td>
-            <td onclick="appendOperation(2)" >2</td>
-            <td onclick="appendOperation(3)" >3</td>
-            <td onclick="appendOperation(' + ')" class="highlight">+</td>
-        </tr>
-
-        <tr>
-            <td onclick="appendOperation(0)" >0</td>
-            <td onclick="appendOperation('.')">,</td>
-            <td onclick= "calculateResult()" id="result">=</td>
-            <td onclick="appendOperation(' - ')" class="highlight">-</td>
-        </tr>
+      <tr>
+        <td class="calculator-button number-button" data-value="0">0</td>
+        <td class="calculator-button number-button" data-value=".">,</td>
+        <td class="calculator-button action-button" data-action="calculate">
+          =
+        </td>
+        <td class="calculator-button operator-button" data-value=" - ">-</td>
+      </tr>
     </table>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
